@@ -1,11 +1,10 @@
 ## Step-by-Step Instructions and Checklist
 
-- [ ] Make sure you run `node scripts/rebrand.js` from the root directory to rebrand your repo.
 - [ ] Run `yarn plop`, and follow prompts to generate server or client components for your library
 - [ ] 🌟 Enable [private vulnerability reporting](https://github.com/react18-tools/react-mouse-trail/security)
 - [ ] Set up `CodeCov`
   - Visit Codecov and set up your repo
-  - Create [repository secret]((https://github.com/react18-tools/react-mouse-trail/settings/secrets/actions)) for `CODECOV_TOKEN`
+  - Create [repository secret](<(https://github.com/react18-tools/react-mouse-trail/settings/secrets/actions)>) for `CODECOV_TOKEN`
 - [ ] Set up `CodeClimate`
   - Visit CodeClimate and set up your repo
   - Create [repository secret] for `CC_TEST_REPORTER_ID`
