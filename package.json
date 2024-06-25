@@ -1,0 +1,43 @@
+{
+  "name": "turborepo-template",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "clean": "turbo clean",
+    "dev": "turbo dev",
+    "doc": "node scripts/doc.js && typedoc",
+    "format": "prettier --write \"**/*.{ts,tsx,md,css,scss}\"",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "typecheck": "turbo typecheck",
+    "preinstall": "node scripts/update-pm.js"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.6",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^20.14.8",
+    "enquirer": "^2.4.1",
+    "plop": "^4.0.1",
+    "prettier": "^3.3.2",
+    "turbo": "^2.0.5",
+    "typedoc": "^0.26.2",
+    "typedoc-plugin-extras": "^3.0.0",
+    "typedoc-plugin-inline-sources": "^1.0.2",
+    "typedoc-plugin-mdn-links": "^3.2.1",
+    "typedoc-plugin-missing-exports": "^3.0.0",
+    "typedoc-plugin-rename-defaults": "^0.7.1",
+    "typedoc-plugin-zod": "^1.2.0"
+  },
+  "packageManager": "pnpm@9.4.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "pnpm": {
+    "overrides": {
+      "eslint": "^8.0.0"
+    }
+  },
+  "overrides": {
+    "eslint": "^8.0.0"
+  }
+}
