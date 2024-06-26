@@ -38,7 +38,7 @@ export const trails = (
       /* v8 ignore next */
       gl.deleteShader(shader);
       /* v8 ignore next */
-      throw new Error(`Could not compile WebGL shader. \n\n" ${info}`);
+      throw new Error("Could not compile WebGL shader. \n\n" + info); // skipcq: JS-0246
       /* v8 ignore next */
     }
     return shader;
@@ -80,18 +80,13 @@ export const trails = (
   const positionBuffer = createBuffer();
   const timeBuffer = createBuffer();
 
+  let runningAnim = false;
   let positions: number[] = [];
   let fades: number[] = [];
-  canvas.addEventListener("mousemove", (event: MouseEvent) => {
-    const x = (event.clientX / canvas.width) * 2 - 1;
-    const y = (event.clientY / canvas.height) * -2 + 1;
 
-    positions.unshift(x, y);
-    fades.unshift(1);
-  });
-
-  /** Start render loop */
+  /** The render loop */
   const render = () => {
+    runningAnim = true;
     fades = fades.map(fade => fade / 1.1);
     positions = positions.filter((_, index) => fades[index] > 0.001);
     fades = fades.filter(fade => fade > 0.01);
@@ -107,8 +102,16 @@ export const trails = (
 
     gl.drawArrays(gl.LINE_STRIP, 0, positions.length / 2);
 
-    requestAnimationFrame(render);
+    positions.length ? requestAnimationFrame(render) : (runningAnim = false);
   };
   gl.clearColor(0.0, 0.0, 0.0, 0.0);
-  render();
+
+  canvas.addEventListener("mousemove", (event: MouseEvent) => {
+    const x = (event.clientX / canvas.width) * 2 - 1;
+    const y = (event.clientY / canvas.height) * -2 + 1;
+
+    positions.unshift(x, y);
+    fades.unshift(1);
+    !runningAnim && render();
+  });
 };

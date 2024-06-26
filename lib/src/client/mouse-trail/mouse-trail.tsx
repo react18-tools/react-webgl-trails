@@ -3,6 +3,7 @@ import styles from "./mouse-trail.module.scss";
 import { trails } from "../../utils";
 
 export interface MouseTrailProps extends HTMLProps<HTMLCanvasElement> {
+  /** Trail color tuple RGB color values - 0.0 to 1.0 */
   rgb?: [number, number, number];
 }
 
@@ -17,7 +18,6 @@ export const MouseTrail = ({ className, rgb, ...props }: MouseTrailProps) => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const gl = canvas?.getContext("webgl");
-    console.log({ canvas, gl });
     if (!gl || !canvas) return;
     const onResize = () => {
       canvas.width = innerWidth;
