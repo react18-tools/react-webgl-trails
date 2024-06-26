@@ -77,4 +77,4 @@ execSync(
 );
 
 // Publish canonical packages
-execSync("node scripts/publish-canonical.js");
+// execSync("node scripts/publish-canonical.js");
