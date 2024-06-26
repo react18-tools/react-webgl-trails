@@ -1,5 +1,11 @@
 # react-mouse-trails
 
+## 0.0.2
+
+### Patch Changes
+
+- 05460e4: Pause the render loop when not required.
+
 ## 0.0.2-optimize.0
 
 ### Patch Changes
