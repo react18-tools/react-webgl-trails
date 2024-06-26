@@ -38,7 +38,8 @@ export const trails = (
       /* v8 ignore next */
       gl.deleteShader(shader);
       /* v8 ignore next */
-      throw new Error(`Could not compile WebGL shader. \n\n" ${info}`);
+      // skipcq: JS-0246
+      throw new Error("Could not compile WebGL shader. \n\n" + info);
       /* v8 ignore next */
     }
     return shader;
