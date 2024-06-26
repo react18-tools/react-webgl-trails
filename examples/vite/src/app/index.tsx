@@ -5,7 +5,7 @@ import { LoaderContainer, useLoader } from "react18-loaders";
 import { LandingPage, Layout } from "@repo/shared/dist/server";
 import { Core } from "nextjs-darkmode";
 import { Demo, Header } from "@repo/shared";
-import { MouseTrail } from "react-mouse-trail";
+import { MouseTrail } from "react-mouse-trails";
 
 /** Vite App */
 function App(): JSX.Element {

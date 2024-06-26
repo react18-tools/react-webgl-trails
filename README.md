@@ -21,19 +21,19 @@ A lightweight WebGL-based React component for creating an interactive mouse trai
 ### Installation
 
 ```bash
-$ pnpm add react-mouse-trail
+$ pnpm add react-mouse-trails
 ```
 
 **_or_**
 
 ```bash
-$ npm install react-mouse-trail
+$ npm install react-mouse-trails
 ```
 
 **_or_**
 
 ```bash
-$ yarn add react-mouse-trail
+$ yarn add react-mouse-trails
 ```
 
 ### Adding CSS
@@ -43,7 +43,7 @@ You can import CSS in your global styles or from your component. In the case of 
 In your stylesheet
 
 ```css
-@import "react-mouse-trail/dist";
+@import "react-mouse-trails/dist";
 ```
 
 or in your component
