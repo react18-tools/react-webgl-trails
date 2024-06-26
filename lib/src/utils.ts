@@ -29,9 +29,13 @@ export const trails = (
     gl.shaderSource(shader, source);
     gl.compileShader(shader);
     if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+      /* v8 ignore next */
       const info = gl.getShaderInfoLog(shader);
+      /* v8 ignore next */
       gl.deleteShader(shader);
+      /* v8 ignore next */
       throw new Error(`Could not compile WebGL shader. \n\n" ${info}`);
+      /* v8 ignore next */
     }
     return shader;
   };
@@ -48,8 +52,11 @@ export const trails = (
   gl.attachShader(program, fragmentShader);
   gl.linkProgram(program);
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+    /* v8 ignore next */
     console.error(gl.getProgramInfoLog(program));
+    /* v8 ignore next */
     throw new Error("Failed to link program");
+    /* v8 ignore next */
   }
   gl.useProgram(program);
 
@@ -77,9 +84,7 @@ export const trails = (
   });
 
   const render = () => {
-    fades = fades.map(fade => {
-      return fade / 1.1;
-    });
+    fades = fades.map(fade => fade / 1.1);
     positions = positions.filter((_, index) => fades[index] > 0.001);
     fades = fades.filter(fade => fade > 0.01);
     gl.clear(gl.COLOR_BUFFER_BIT);

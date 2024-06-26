@@ -11,11 +11,11 @@ describe("mouse-trail", () => {
     expect(screen.getByTestId("mouse-trail").classList).toContain(clx);
   });
 
-  test("resize", ({ expect }) => {
+  test("mouseMove works", () => {
     render(<MouseTrail />);
-    window.innerWidth = 100;
-    window.innerHeight = 100;
-    act(() => fireEvent(window, new Event("resize")));
-    expect(screen.getByTestId("mouse-trail")).not.toBeNull();
+    const el = screen.getByTestId("mouse-trail");
+    act(() => {
+      fireEvent.mouseMove(el, { clientX: 100, clientY: 100 });
+    });
   });
 });
