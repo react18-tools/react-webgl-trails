@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
           {children}
         </Layout>
         <GlobalLoader />
-        <MouseTrail />
+        <MouseTrail rgb={[0, 1, 0]} />
       </body>
     </html>
   );

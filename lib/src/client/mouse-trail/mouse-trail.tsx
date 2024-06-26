@@ -1,9 +1,9 @@
-import { HTMLProps, ReactNode, useEffect, useRef } from "react";
+import { HTMLProps, useEffect, useRef } from "react";
 import styles from "./mouse-trail.module.scss";
 import { trails } from "../../utils";
 
 export interface MouseTrailProps extends HTMLProps<HTMLCanvasElement> {
-  children?: ReactNode;
+  rgb?: [number, number, number];
 }
 
 /**
@@ -12,7 +12,7 @@ export interface MouseTrailProps extends HTMLProps<HTMLCanvasElement> {
  * <MouseTrail />
  * ```
  */
-export const MouseTrail = ({ className, ...props }: MouseTrailProps) => {
+export const MouseTrail = ({ className, rgb, ...props }: MouseTrailProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -24,7 +24,7 @@ export const MouseTrail = ({ className, ...props }: MouseTrailProps) => {
       gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
     };
     onResize();
-    trails(canvas, gl);
+    trails(canvas, gl, rgb);
     addEventListener("resize", onResize);
     // skipcq: JS-0045
     return () => {

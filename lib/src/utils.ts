@@ -8,15 +8,19 @@ const vertexShaderSource = `
     }
 `;
 
-const fragmentShaderSource = `
+const fragmentShaderSource = (rgb = [1, 0, 0]) => `
     precision mediump float;
     varying float v;
     void main() {
-        gl_FragColor = vec4(1.0, 0.0, 0.0, v);
+        gl_FragColor = vec4(${rgb.join()}, v);
     }
 `;
 
-export const trails = (canvas: HTMLCanvasElement, gl: WebGLRenderingContext) => {
+export const trails = (
+  canvas: HTMLCanvasElement,
+  gl: WebGLRenderingContext,
+  rgb?: [number, number, number],
+) => {
   gl.enable(gl.BLEND);
   gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
   const createShader = (type: number, source: string): WebGLShader => {
@@ -37,7 +41,7 @@ export const trails = (canvas: HTMLCanvasElement, gl: WebGLRenderingContext) => 
     return buffer;
   };
   const vertexShader = createShader(gl.VERTEX_SHADER, vertexShaderSource);
-  const fragmentShader = createShader(gl.FRAGMENT_SHADER, fragmentShaderSource);
+  const fragmentShader = createShader(gl.FRAGMENT_SHADER, fragmentShaderSource(rgb));
   const program = gl.createProgram();
   if (!program) throw new Error("Failed to create program");
   gl.attachShader(program, vertexShader);
