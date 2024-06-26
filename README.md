@@ -52,6 +52,29 @@ or in your component
 import "react-mouse-trail/dist/index.css";
 ```
 
+Here's a revised version of the usage section:
+
+## Usage
+
+MouseTrail is simple to integrate:
+
+```tsx
+import { MouseTrail } from "react-mouse-trail";
+
+export default function Layout() {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        {/* ... */}
+        <MouseTrail rgb={[1, 0, 0]} />
+      </body>
+    </html>
+  );
+}
+```
+
+By default, the RGB value `[1, 0, 0]` represents the color red.
+
 ![Repobeats](https://repobeats.axiom.co/api/embed/016960ad97aa7b1abbdd9a615f5ffeb08d869cb6.svg "Repobeats analytics image")
 
 ## License
