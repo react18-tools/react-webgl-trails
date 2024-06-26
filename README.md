@@ -52,6 +52,8 @@ or in your component
 import "react-mouse-trail/dist/index.css";
 ```
 
+![Repobeats](https://repobeats.axiom.co/api/embed/016960ad97aa7b1abbdd9a615f5ffeb08d869cb6.svg "Repobeats analytics image")
+
 ## License
 
 This library is licensed under the MPL-2.0 open-source license.
