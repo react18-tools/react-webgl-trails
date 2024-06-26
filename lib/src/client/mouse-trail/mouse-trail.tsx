@@ -17,6 +17,7 @@ export const MouseTrail = ({ className, rgb, ...props }: MouseTrailProps) => {
   useEffect(() => {
     const canvas = canvasRef.current;
     const gl = canvas?.getContext("webgl");
+    console.log({ canvas, gl });
     if (!gl || !canvas) return;
     const onResize = () => {
       canvas.width = innerWidth;

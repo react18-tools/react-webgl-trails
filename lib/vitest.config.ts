@@ -8,7 +8,7 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     globals: true,
-    setupFiles: [],
+    setupFiles: ["jest-webgl-canvas-mock"],
     coverage: {
       include: ["src/**"],
       exclude: ["src/**/index.ts", "src/**/declaration.d.ts"],

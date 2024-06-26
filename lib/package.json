@@ -25,7 +25,6 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
-    "@repo/jest-presets": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@testing-library/react": "^16.0.0",
     "@types/node": "^20.14.8",
@@ -43,9 +42,6 @@
     "typescript": "^5.5.2",
     "vite-tsconfig-paths": "^4.3.2",
     "vitest": "^1.6.0"
-  },
-  "dependencies": {
-    "r18gs": "^1.1.3"
   },
   "peerDependencies": {
     "@types/react": "16.8 - 19",
