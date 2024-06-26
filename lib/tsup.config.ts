@@ -24,7 +24,7 @@ export default defineConfig(
               const contents = text
                 .replace(/if \(!gl[^}]*}/gm, "")
                 .replace(/;\s*if \(![^;]*;/gm, "!;")
-                .replace(/`[^`]*`/gm, match => match.replace(/\s+/g, " "))
+                .replace(/`[^`]*`/gm, match => match.replace(/\s+/g, " ").trim())
                 .trim();
               return { contents, loader: "ts" };
             });
