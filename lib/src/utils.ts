@@ -8,6 +8,7 @@ const vertexShaderSource = `
     }
 `;
 
+/** Create fragmentSource */
 const fragmentShaderSource = (rgb = [1, 0, 0]) => `
     precision mediump float;
     varying float v;
@@ -16,6 +17,7 @@ const fragmentShaderSource = (rgb = [1, 0, 0]) => `
     }
 `;
 
+/** Setup trails */
 export const trails = (
   canvas: HTMLCanvasElement,
   gl: WebGLRenderingContext,
@@ -23,6 +25,8 @@ export const trails = (
 ) => {
   gl.enable(gl.BLEND);
   gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+
+  /** Create shader */
   const createShader = (type: number, source: string): WebGLShader => {
     const shader = gl.createShader(type);
     if (!shader) throw new Error("Failed to create shader");
@@ -39,6 +43,8 @@ export const trails = (
     }
     return shader;
   };
+
+  /** create buffer */
   const createBuffer = () => {
     const buffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
@@ -51,6 +57,7 @@ export const trails = (
   gl.attachShader(program, vertexShader);
   gl.attachShader(program, fragmentShader);
   gl.linkProgram(program);
+
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
     /* v8 ignore next */
     console.error(gl.getProgramInfoLog(program));
@@ -83,6 +90,7 @@ export const trails = (
     fades.unshift(1);
   });
 
+  /** Start render loop */
   const render = () => {
     fades = fades.map(fade => fade / 1.1);
     positions = positions.filter((_, index) => fades[index] > 0.001);
