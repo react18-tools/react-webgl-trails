@@ -18,11 +18,7 @@ const fragmentShaderSource = (rgb = [1, 0, 0]) => `
 `;
 
 /** Setup trails */
-export const trails = (
-  canvas: HTMLCanvasElement,
-  gl: WebGLRenderingContext,
-  rgb?: [number, number, number],
-) => {
+export const trails = (gl: WebGLRenderingContext, rgb?: [number, number, number]) => {
   gl.enable(gl.BLEND);
   gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
 
@@ -85,7 +81,7 @@ export const trails = (
   let fades: number[] = [];
 
   /** The render loop */
-  const render = () => {
+  const render = (): void => {
     runningAnim = true;
     fades = fades.map(fade => fade / 1.1);
     positions = positions.filter((_, index) => fades[index] > 0.001);
@@ -106,9 +102,9 @@ export const trails = (
   };
   gl.clearColor(0.0, 0.0, 0.0, 0.0);
 
-  canvas.addEventListener("mousemove", (event: MouseEvent) => {
-    const x = (event.clientX / canvas.width) * 2 - 1;
-    const y = (event.clientY / canvas.height) * -2 + 1;
+  addEventListener("mousemove", (event: MouseEvent) => {
+    const x = (event.clientX / innerWidth) * 2 - 1;
+    const y = (event.clientY / innerHeight) * -2 + 1;
 
     positions.unshift(x, y);
     fades.unshift(1);

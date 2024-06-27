@@ -36,24 +36,6 @@ $ npm install react-mouse-trails
 $ yarn add react-mouse-trails
 ```
 
-### Adding CSS
-
-You can import CSS in your global styles or from your component. In the case of Next.js, you can import global styles only in `layout` or `_app` components.
-
-In your stylesheet
-
-```css
-@import "react-mouse-trails/dist";
-```
-
-or in your component
-
-```ts
-import "react-mouse-trail/dist/index.css";
-```
-
-Here's a revised version of the usage section:
-
 ## Usage
 
 MouseTrail is simple to integrate:
