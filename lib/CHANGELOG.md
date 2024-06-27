@@ -1,5 +1,11 @@
 # react-mouse-trails
 
+## 0.0.3
+
+### Patch Changes
+
+- b30caa8: No need to import styles. Fix blocking overlay
+
 ## 0.0.2
 
 ### Patch Changes
