@@ -16,7 +16,7 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup && tsc -p tsconfig-build.json",
+    "build": "tsup && tsc -p tsconfig-build.json && touch dist/index.css",
     "clean": "rm -rf dist",
     "dev": "tsup --watch && tsc -p tsconfig-build.json -w",
     "typecheck": "tsc --noEmit",
