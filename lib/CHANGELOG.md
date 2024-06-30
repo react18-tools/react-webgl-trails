@@ -1,5 +1,11 @@
 # react-mouse-trails
 
+## 0.0.4
+
+### Patch Changes
+
+- b3e0277: Refactor: use glsl shader files.
+
 ## 0.0.3
 
 ### Patch Changes
