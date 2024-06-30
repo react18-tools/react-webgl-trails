@@ -63,7 +63,7 @@ export const trails = (gl: WebGLRenderingContext, rgb?: [number, number, number]
   }
   gl.useProgram(program);
 
-  const getLocation = (name: string, size: number) => {
+  const getLocation = (name: string, size: number): number => {
     const location = gl.getAttribLocation(program, name);
     gl.vertexAttribPointer(location, size, gl.FLOAT, false, 0, 0);
     gl.enableVertexAttribArray(location);
