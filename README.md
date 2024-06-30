@@ -1,4 +1,4 @@
-# React Mouse Trail <img src="https://github.com/react18-tools/react-mouse-trail/blob/main/popper.png?raw=true" style="height: 40px"/>
+# React WebGL Trails <img src="https://github.com/react18-tools/react-mouse-trail/blob/main/popper.png?raw=true" style="height: 40px"/>
 
 [![test](https://github.com/react18-tools/react-mouse-trail/actions/workflows/test.yml/badge.svg)](https://github.com/react18-tools/react-mouse-trail/actions/workflows/test.yml) [![Maintainability](https://api.codeclimate.com/v1/badges/4bb3a3316ff4ecd2a9eb/maintainability)](https://codeclimate.com/github/react18-tools/react-mouse-trail/maintainability) [![codecov](https://codecov.io/gh/react18-tools/react-mouse-trail/graph/badge.svg)](https://codecov.io/gh/react18-tools/react-mouse-trail) [![Version](https://img.shields.io/npm/v/react-mouse-trails.svg?colorB=green)](https://www.npmjs.com/package/react-mouse-trails) [![Downloads](https://img.jsdelivr.com/img.shields.io/npm/d18m/react-mouse-trails.svg)](https://www.npmjs.com/package/react-mouse-trails) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-mouse-trails) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/from-referrer/)
 
@@ -21,19 +21,19 @@ A lightweight WebGL-based React component for creating an interactive mouse trai
 ### Installation
 
 ```bash
-$ pnpm add react-mouse-trails
+$ pnpm add react-webgl-trails
 ```
 
 **_or_**
 
 ```bash
-$ npm install react-mouse-trails
+$ npm install react-webgl-trails
 ```
 
 **_or_**
 
 ```bash
-$ yarn add react-mouse-trails
+$ yarn add react-webgl-trails
 ```
 
 ## Usage
