@@ -8,9 +8,9 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "repository": "github:react18-tools/react-mouse-trail",
-  "bugs": "https://github.com/react18-tools/react-mouse-trail/issues",
-  "homepage": "https://github.com/react18-tools/react-mouse-trail/#readme",
+  "repository": "github:react18-tools/react-webgl-trails",
+  "bugs": "https://github.com/react18-tools/react-webgl-trails/issues",
+  "homepage": "https://github.com/react18-tools/react-webgl-trails/#readme",
   "sideEffects": false,
   "files": [
     "dist/**"
