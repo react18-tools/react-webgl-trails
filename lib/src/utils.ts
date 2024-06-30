@@ -1,24 +1,8 @@
-const vertexShaderSource = `
-    attribute vec2 pos;
-    attribute float a;
-    varying float v;
-    void main() {
-        gl_Position = vec4(pos, 0.0, 1.0);
-        v = a;
-    }
-`;
-
-/** Create fragmentSource */
-const fragmentShaderSource = (rgb = [1, 0, 0]) => `
-    precision mediump float;
-    varying float v;
-    void main() {
-        gl_FragColor = vec4(${rgb.join()}, v);
-    }
-`;
+import vertexShaderSource from "./shaders/vert.glsl?raw";
+import fragmentShaderSource from "./shaders/frag.glsl?raw";
 
 /** Setup trails */
-export const trails = (gl: WebGLRenderingContext, rgb?: [number, number, number]) => {
+export const trails = (gl: WebGLRenderingContext, rgb: [number, number, number] = [1, 0, 0]) => {
   gl.enable(gl.BLEND);
   gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
 
@@ -47,7 +31,7 @@ export const trails = (gl: WebGLRenderingContext, rgb?: [number, number, number]
     return buffer;
   };
   const vertexShader = createShader(gl.VERTEX_SHADER, vertexShaderSource);
-  const fragmentShader = createShader(gl.FRAGMENT_SHADER, fragmentShaderSource(rgb));
+  const fragmentShader = createShader(gl.FRAGMENT_SHADER, fragmentShaderSource);
   const program = gl.createProgram();
   if (!program) throw new Error("Failed to create program");
   gl.attachShader(program, vertexShader);
@@ -75,6 +59,8 @@ export const trails = (gl: WebGLRenderingContext, rgb?: [number, number, number]
 
   const positionBuffer = createBuffer();
   const timeBuffer = createBuffer();
+
+  gl.uniform3f(gl.getUniformLocation(program, "c"), ...rgb);
 
   let runningAnim = false;
   let positions: number[] = [];
