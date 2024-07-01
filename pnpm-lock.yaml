@@ -185,8 +185,8 @@ importers:
         specifier: ^0.0.4
         version: 0.0.4
       esbuild-plugin-webgl:
-        specifier: ^0.0.2
-        version: 0.0.2
+        specifier: ^0.0.3
+        version: 0.0.3
       jsdom:
         specifier: ^24.1.0
         version: 24.1.0
@@ -1759,8 +1759,8 @@ packages:
       next:
         optional: true
 
-  esbuild-plugin-webgl@0.0.2:
-    resolution: {integrity: sha512-zFy/uzwfiG9z4SE/877K4RXflKZ3/apE01EqH5uwstN8eNA5xoVL/UapxU9+obYT1vf9/Lx3gLA8SK7k5FOkKg==}
+  esbuild-plugin-webgl@0.0.3:
+    resolution: {integrity: sha512-GamCeHiiw5wSsUJSIZiblVDYkJXxecBYqLAOxDYsj4PriRKaPv5LzGVnk6RgavPZYL22keiHNFWBZ1nPijMR5Q==}
 
   esbuild@0.21.5:
     resolution: {integrity: sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE3+NK93JYxc8VMSep+lOUSC/RVKaBqw==}
@@ -2622,8 +2622,8 @@ packages:
     resolution: {integrity: sha512-GCfE1mtsHGOELCU8e/Z7YWzpmybrx/+dSTfLrvY8qRmaY6zXTKWn6WQIjaAFw069icm6GVMNkgu0NzI4iPZUNw==}
     engines: {node: '>=10'}
 
-  istanbul-lib-source-maps@5.0.4:
-    resolution: {integrity: sha512-wHOoEsNJTVltaJp8eVkm8w+GVkVNHT2YDYo53YdzQEL2gWm1hBX5cGFR9hQJtuGLebidVX7et3+dmDZrmclduw==}
+  istanbul-lib-source-maps@5.0.5:
+    resolution: {integrity: sha512-gKf4eJ8bHmSX/ljiOCpnd8vtmHTwG71uugm0kXYd5aqFCl6z8cj8k7QduXSwU6QOst6LCdSXTlaoc8W4554crQ==}
     engines: {node: '>=10'}
 
   istanbul-reports@3.1.7:
@@ -5466,7 +5466,7 @@ snapshots:
       debug: 4.3.5
       istanbul-lib-coverage: 3.2.2
       istanbul-lib-report: 3.0.1
-      istanbul-lib-source-maps: 5.0.4
+      istanbul-lib-source-maps: 5.0.5
       istanbul-reports: 3.1.7
       magic-string: 0.30.10
       magicast: 0.3.4
@@ -6210,7 +6210,7 @@ snapshots:
     optionalDependencies:
       next: 14.2.4(@babel/core@7.24.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.6)
 
-  esbuild-plugin-webgl@0.0.2: {}
+  esbuild-plugin-webgl@0.0.3: {}
 
   esbuild@0.21.5:
     optionalDependencies:
@@ -7193,7 +7193,7 @@ snapshots:
       make-dir: 4.0.0
       supports-color: 7.2.0
 
-  istanbul-lib-source-maps@5.0.4:
+  istanbul-lib-source-maps@5.0.5:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       debug: 4.3.5
