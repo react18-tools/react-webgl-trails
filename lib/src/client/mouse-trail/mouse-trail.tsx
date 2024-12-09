@@ -14,7 +14,7 @@ export interface MouseTrailProps extends HTMLProps<HTMLCanvasElement> {
  * <MouseTrail />
  * ```
  */
-export const MouseTrail = ({ rgb, ...props }: MouseTrailProps): JSX.Element => {
+export const MouseTrail = ({ rgb, ...props }: MouseTrailProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const canvas = canvasRef.current;
