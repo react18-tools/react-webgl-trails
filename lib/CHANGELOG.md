@@ -1,5 +1,11 @@
 # react-mouse-trails
 
+## 0.0.5
+
+### Patch Changes
+
+- 349139f: Fix perdeps
+
 ## 0.0.4
 
 ### Patch Changes

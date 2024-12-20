@@ -1,5 +1,12 @@
 # @repo/shared
 
+## 0.0.5
+
+### Patch Changes
+
+- Updated dependencies [349139f]
+  - react-mouse-trails@0.0.5
+
 ## 0.0.4
 
 ### Patch Changes
