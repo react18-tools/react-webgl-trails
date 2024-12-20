@@ -1,7 +1,6 @@
 import fs from "node:fs";
 import { defineConfig, type Options } from "tsup";
 import react18Plugin from "esbuild-plugin-react18";
-import cssPlugin from "esbuild-plugin-react18-css";
 import { rdiPlugin } from "esbuild-plugin-rdi";
 import { webglPlugin } from "esbuild-plugin-webgl";
 
@@ -32,7 +31,6 @@ export default defineConfig(
         },
         webglPlugin(),
         react18Plugin({ disableJSXRequireDedup: true }),
-        cssPlugin({ generateScopedName: "rt_[local]" }),
         rdiPlugin(),
       ],
       ...options,
