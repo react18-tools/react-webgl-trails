@@ -79,7 +79,7 @@ importers:
         version: link:../../lib
       react18-loaders:
         specifier: ^1.1.4
-        version: 1.1.4(@types/react@19.0.10)(next@15.2.1(@babel/core@7.26.9)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.85.1))(react@19.0.0)
+        version: 1.1.4(@types/react@19.0.10)(next@15.2.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.85.1))(react@19.0.0)
     devDependencies:
       '@next/eslint-plugin-next':
         specifier: ^15.2.1
@@ -122,7 +122,7 @@ importers:
         version: link:../../lib
       react18-loaders:
         specifier: ^1.1.4
-        version: 1.1.4(@types/react@19.0.10)(next@15.2.1(@babel/core@7.26.9)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.85.1))(react@19.0.0)
+        version: 1.1.4(@types/react@19.0.10)(next@15.2.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.85.1))(react@19.0.0)
       react18-themes:
         specifier: ^3.2.0
         version: 3.2.0(@types/react@19.0.10)(next@15.2.1(@babel/core@7.26.9)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.85.1))(react@19.0.0)
@@ -260,7 +260,7 @@ importers:
         version: link:../../lib
       react18-loaders:
         specifier: ^1.1.4
-        version: 1.1.4(@types/react@19.0.10)(next@15.2.1(@babel/core@7.26.9)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.85.1))(react@19.0.0)
+        version: 1.1.4(@types/react@19.0.10)(next@15.2.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.85.1))(react@19.0.0)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -8709,7 +8709,7 @@ snapshots:
 
   react-refresh@0.14.2: {}
 
-  react18-loaders@1.1.4(@types/react@19.0.10)(next@15.2.1(@babel/core@7.26.9)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.85.1))(react@19.0.0):
+  react18-loaders@1.1.4(@types/react@19.0.10)(next@15.2.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass@1.85.1))(react@19.0.0):
     dependencies:
       '@types/react': 19.0.10
       r18gs: 2.1.0(@types/react@19.0.10)(react@19.0.0)
